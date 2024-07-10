@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imv_background_profile"
+        android:layout_width="match_parent"
+        android:layout_height="84pt"
+        android:background="@mipmap/background_profile" />
+
+    <RelativeLayout
+        android:layout_marginTop="20.5pt"
+        android:layout_marginLeft="10pt"
+        android:layout_width="wrap_content"
+        android:layout_height="24pt">
+
+        <RelativeLayout
+            android:id="@+id/rl_profile"
+            android:background="@drawable/bgr_circle_no_border"
+            android:layout_width="24pt"
+            android:layout_height="24pt">
+
+            <ImageView
+                android:id="@+id/imv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:textColor="@color/white"
+            android:text="Xin chào,"
+            android:layout_marginLeft="8pt"
+            android:layout_toRightOf="@id/rl_profile"
+            android:textSize="6.5pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hello"
+            android:layout_marginLeft="8pt"
+            android:layout_marginTop="2pt"
+            android:layout_toRightOf="@id/rl_profile"
+            android:text="Oliver"
+            android:textColor="@color/white"
+            android:textSize="7.5pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_balance"
+        android:layout_width="match_parent"
+        android:layout_height="59pt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8pt"
+        android:layout_marginTop="54.5pt"
+        android:layout_marginRight="8pt"
+        android:background="@drawable/bgr_profile"
+        android:elevation="5pt"
+        android:padding="8pt"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/tv_title_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số dư tài khoản"
+            android:textColor="#80333333"
+            android:textSize="6.5pt" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_balance"
+            android:layout_marginTop="2pt"
+            android:text="0111688898"
+            android:textColor="#333333"
+            android:textSize="6.5pt" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_no"
+            android:layout_marginTop="6pt">
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="30.000.000 VNĐ"
+                android:textColor="#0088db"
+                android:textSize="12pt"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/imv_show_balance"
+                android:layout_width="12pt"
+                android:layout_height="12pt"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5pt"
+                android:layout_toRightOf="@id/tv_balance"
+                android:src="@drawable/ic_hide_gray" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="12.5pt"
+        android:layout_marginRight="12.5pt"
+        android:id="@+id/ll_first_row"
+        android:layout_below="@id/rl_balance"
+        android:layout_marginTop="24pt"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_account"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_my_card"
+            app:text="Tài khoản"
+            app:type="0"/>
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_send_money"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_send"
+            app:text="Chuyển tiền"
+            app:type="0"/>
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_payment"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_payment"
+            app:text="Thanh toán"
+            app:type="0"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/ll_first_row"
+        android:id="@+id/ll_second_row"
+        android:layout_marginTop="24.5pt"
+        android:layout_marginLeft="12.5pt"
+        android:layout_marginRight="12.5pt"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_receive"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_receive"
+            app:text="Nạp tiền"
+            app:type="0"/>
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_save"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_save"
+            app:text="Tiết kiệm"
+            app:type="0"/>
+
+        <com.mobio.sample.CombineView
+            android:gravity="center"
+            android:id="@+id/cv_card"
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            app:image="@drawable/ic_card"
+            app:text="Thẻ"
+            app:type="0"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/ll_tab"
+        android:id="@+id/tv_did"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/sv_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_tab"
+        android:layout_below="@id/ll_second_row">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng cục Thống kê cho biết khoảng 1,3 triệu lao động đã về quê tránh dịch, tính từ tháng 7 đến 15/9. Số liệu Tổng cục Thống kê công bố sáng 12/10 cho hay trong số 1,3 triệu lao động nêu trên, khoảng 324.000 người trở về từ Hà Nội, 292.000 người về từ TP HCM và 450.000 người trở về từ các tỉnh, thành khác phía Nam. Lao động rời thành phố lớn, trung tâm công nghiệp về các vùng quê diễn ra liên tục từ tháng 7 đến nay. Tuy nhiên, số liệu thống kê lần này chưa tính đến dòng người về quê từ đầu tháng 10, khi TP HCM và các tỉnh phía Nam nới lỏng giãn cách.
+Thống kê 930.000 người từ 15 tuổi trở lên đã trở về địa phương, khoảng 34% đang có việc làm; 38% mất việc, không tìm được việc làm do cách ly, giãn cách và số còn lại không có nhu cầu làm việc do e ngại dịch bệnh.
+Thu nhập bình quân trong tháng của người lao động vì thế xuống mức thấp nhất trong vòng mười năm qua, giảm 877.000 đồng, xuống còn 5,2 triệu đồng. Lao động khu vực dịch vụ vẫn chịu ảnh hưởng nặng nhất khi thu nhập bình quân còn khoảng 6,2 triệu đồng, giảm một triệu đồng so với quý trước. Lao động ngành công nghiệp và xây dựng giảm 906.000 đồng, xuống còn 5,8 triệu đồng.
+
+Ngược lại, nông lâm nghiệp và thủy sản ổn định cả về tốc độ tăng trưởng lẫn thu nhập bình quân. Đây là khu vực giảm ít nhất khoảng 340.000 đồng, đạt 3,4 triệu đồng mỗi tháng. Người làm công ăn lương thu nhập mỗi tháng còn 6 triệu đồng, giảm 795.000 đồng so với quý trước.
+
+Tỷ lệ thiếu việc làm trong độ tuổi lao động của quý này đã tăng lên mức cao nhất trong vòng mười năm qua, khoảng 1,8 triệu người. Trong đó, tỷ lệ thiếu việc làm ở thành thị khoảng 5,3%, cao hơn so với nông thôn, khoảng 3,9%. Điều này khác với xu hướng thị trường lao động thường được quan sát ở nước ta với tình trạng thiếu việc làm ở khu vực nông thôn thường nghiêm trọng hơn so với thành thị." />
+    </ScrollView>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:id="@+id/ll_tab"
+        android:elevation="5pt"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="24pt"
+        tools:targetApi="lollipop">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_home_active"
+                android:layout_width="12pt"
+                android:layout_height="12pt"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_transaction_unactive"
+                android:layout_width="12pt"
+                android:layout_height="12pt"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_scan_qr"
+                android:layout_width="18pt"
+                android:layout_height="18pt"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_notification_unactive"
+                android:layout_width="12pt"
+                android:layout_height="12pt"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_account_unactive"
+                android:layout_width="12pt"
+                android:layout_height="12pt"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_above="@id/ll_tab"
+        android:background="@drawable/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2pt"/>
+
+</RelativeLayout>
